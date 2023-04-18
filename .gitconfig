@@ -1,0 +1,14 @@
+[init]
+	defaultBranch = main
+[user]
+	email = github@ijskoud.dev
+	name = Daan Klarenbeek
+	signingKey = 1AAB8C4FB6612D6FC3FF7F1636A9130EEA3B4CA1
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = true
+[pull]
+	rebase = true

@@ -1,0 +1,73 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change the default prompt format
+format = """
+$env_var$battery$all\
+$character
+"""
+
+# Shows an icon that should be included by zshrc script based on the distribution or os
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](bold white) '
+variable = "STARSHIP_DISTRO"
+disabled = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]
+success_symbol = "[](238)"
+error_symbol = "[](001)"
+
+[cmd_duration]
+format = "took [$duration]($style) "
+
+[package]
+disabled = true
+
+[container]
+disabled = true
+
+[username]
+style_user = "white bold"
+style_root = "white bold"
+format = "[$user]($style) "
+disabled = false  # disable in powershell
+show_always = true
+
+[directory]
+style = "purple bold"
+truncation_length = 3
+truncation_symbol = "~/"
+home_symbol = " ~"
+read_only_style = "197"
+read_only = "  "
+format = "at [$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = " "
+truncation_symbol = ""
+ignore_branches = []
+
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = "purple bold"
+conflicted = "🏳 "
+up_to_date = " "
+untracked = " "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = " "
+modified = " "
+staged = '[++$count](bold blue) '
+renamed = "襁 "
+deleted = " "
+
+[docker_context]
+format = "via [ $context](bold blue) "
+
+[nodejs]
+format = "via [ $version](bold green) "
