@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://ijskoud.dev/assets/svg/logo.svg" width="500px" />
+    <img src="https://ijskoud.dev/assets/svg/logo.svg" width="150px" />
     <h1>Dotfiles</h1>
   
   <p>📁 My ~/.dotfiles for Ubuntu & Windows</p>
